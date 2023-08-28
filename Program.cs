@@ -221,11 +221,11 @@ namespace Entregable1
 
         static void JuegoAdivinanzaFraseOculta()
         {
-            Console.Clear(); // Limpiar la pantalla
+            Console.Clear();
             Console.WriteLine("Adivinanza de Frase Oculta");
 
-            string fraseOriginal = "El gato juega en el jardín";
-            string[] palabrasOcultas = { "gato", "en", "jardín" };
+            string fraseOriginal = "El gato juega en el jardin";
+            string[] palabrasOcultas = { "gato", "en", "jardin" };
 
             int intentosRestantes = 10;
             string[] palabrasAdivinadas = new string[palabrasOcultas.Length];
@@ -237,16 +237,8 @@ namespace Entregable1
                 Console.WriteLine(fraseOculta);
 
                 Console.WriteLine($"Intentos restantes: {intentosRestantes}");
-
-                if (TodasPalabrasAdivinadas(palabrasAdivinadas))
-                {
-                    Console.WriteLine("¡Felicitaciones! Has adivinado todas las palabras.");
-                    Console.WriteLine($"La frase completa es: {fraseOriginal}");
-                    break; // Salir del bucle si todas las palabras ya han sido adivinadas
-                }
-
                 Console.Write("Ingrese una palabra: ");
-                string palabraIngresada = Console.ReadLine().ToLower(); // Convertir a minúsculas
+                string palabraIngresada = Console.ReadLine().ToLower();
 
                 bool palabraCorrecta = false;
 
@@ -269,6 +261,13 @@ namespace Entregable1
                     Console.WriteLine("Incorrecto.");
                     intentosRestantes--;
                 }
+
+                if (TodasPalabrasAdivinadas(palabrasAdivinadas))
+                {
+                    Console.WriteLine("¡Felicitaciones! Has adivinado todas las palabras.");
+                    Console.WriteLine($"La frase completa es: {fraseOriginal}");
+                    break;
+                }
             }
 
             if (intentosRestantes <= 0)
@@ -278,7 +277,6 @@ namespace Entregable1
             Console.WriteLine("\nPresione cualquier tecla para continuar...");
             Console.ReadKey();
         }
-
 
         static string OcultarPalabras(string frase, string[] palabrasAdivinadas)
         {
@@ -290,6 +288,9 @@ namespace Entregable1
                     palabras[i] = "_____";
                 }
             }
+            palabras[0] = "El";
+            palabras[2] = "juega";
+            palabras[4] = "el";
             return string.Join(" ", palabras);
         }
 
