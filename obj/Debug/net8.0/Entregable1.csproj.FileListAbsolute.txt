@@ -12,3 +12,4 @@ C:\Users\dagc4\Desktop\TdeA-2023-2\SoftwareIV\Entregable1\obj\Debug\net8.0\refin
 C:\Users\dagc4\Desktop\TdeA-2023-2\SoftwareIV\Entregable1\obj\Debug\net8.0\Entregable1.pdb
 C:\Users\dagc4\Desktop\TdeA-2023-2\SoftwareIV\Entregable1\obj\Debug\net8.0\Entregable1.genruntimeconfig.cache
 C:\Users\dagc4\Desktop\TdeA-2023-2\SoftwareIV\Entregable1\obj\Debug\net8.0\ref\Entregable1.dll
+C:\Users\dagc4\Desktop\TdeA-2023-2\SoftwareIV\Entregable1\obj\Debug\net8.0\Entregable1.sourcelink.json
